@@ -1,5 +1,14 @@
 # Pubky Shop MCP
 
+> **Status: experimental, superseded.** After review (Chris, 28 Sep 2026) the public front door
+> for agents is a hosted guide, not a local server: see [`llms.txt`](llms.txt) in this repo,
+> proposed for `https://shop.pubky.app/llms.txt`. The index already documents itself at
+> `<index>/api-docs/v0/openapi.json`, and this server was a hand-mirror of nine public, no-key
+> GET routes. Two of its claims were wrong: the local text search ran over the newest 30 rows,
+> not 100 (Nexus caps `limit` at 30), and the `SAT` currency example returns nothing (listings
+> use `BTC` with exponent 8). Kept for reference; a remote MCP over streamable HTTP, generated
+> from the OpenAPI, is the plan only if someone needs ChatGPT or claude.ai connectors.
+
 A read-only [MCP](https://modelcontextprotocol.io) server for the **Pubky Marketplace**
 (`shop.pubky.app`). Any MCP-capable agent — Claude, ChatGPT, a custom bot — can browse
 listings, shops, reviews, reputation and drops through the public index, and hand a person a
