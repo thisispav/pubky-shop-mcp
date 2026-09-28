@@ -1,0 +1,17 @@
+{
+  "name": "pubky-shop-mcp",
+  "version": "0.1.0",
+  "description": "Read-only MCP server for the Pubky Marketplace: lets any AI agent browse listings, shops, reputation and drops through the public Nexus index, and identifies itself while doing so.",
+  "type": "module",
+  "bin": { "pubky-shop-mcp": "src/server.mjs" },
+  "scripts": {
+    "start": "node src/server.mjs",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "engines": { "node": ">=20" },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.1.0",
+    "zod": "^4.0.0"
+  }
+}
